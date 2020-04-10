@@ -1,0 +1,30 @@
+.w3m-container{
+    width: 600px;
+    height: 400px;
+    margin: 100px auto 0px auto;
+    border-radius: 8px;
+    box-shadow: 5px 5px 20px #64a8aa;
+}
+body{
+    background: #23374d !important;
+}
+#btn{
+    margin-right: 20px;
+}
+#logo{
+    width: 50px;
+    margin-left: 40px;
+}
+.navbar-brand{
+    margin-right: 60% !important;
+    font-family: 'Comfortaa', cursive !important;
+}
+#intro{
+    margin: 0px 50px 100px 20px;
+    padding-top: 100px;
+    width: 60%;
+    font-size: 3.5rem;
+    color: #2a2430;
+    font-family: 'Satisfy', cursive !important;
+
+}

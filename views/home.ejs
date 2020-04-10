@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<title>SocialApp</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Comfortaa:700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
+
+
+<body>
+    <nav class="navbar" style="background-color:white;">
+        <img src="https://image.flaticon.com/icons/svg/149/149071.svg" alt="logo" id="logo">
+        <a class="navbar-brand" href="#"
+            style="font-weight: bold; font-family:Verdana, Geneva, Tahoma, sans-serif; color: #23374d; font-size: 2.5rem">
+            SocialApp</a>
+        <div class="cheer-holder success">
+            <!-- success, error, warning or info  -->
+            <div class="cheers-icon"></div>
+            <div class="cheers-body">
+                <div class="cheers-title"></div>
+            </div>
+        </div>
+        <button onclick="document.getElementById('id02').style.display='block'"
+            style="border-radius: 6px; margin-right: 20px;" class="w3-button w3-green w3-large"
+            id="btn2">SignUp</button>
+        <button onclick="document.getElementById('id01').style.display='block'" style="border-radius: 6px;"
+            class="w3-button w3-green w3-large" id="btn">Login</button>
+
+        <div id="id02" class="w3-modal">
+            <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+
+                <div class="w3-center"><br>
+                    <span onclick="document.getElementById('id02').style.display='none'"
+                        class="w3-button w3-xlarge w3-transparent w3-display-topright" title="Close Modal">×</span>
+                </div>
+
+                <form class="w3-container" action="/register" method="POST">
+                    <div class="w3-section">
+                        <label><b>UserID</b></label>
+                        <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter UserID"
+                            autocomplete="off" name="id" required>
+                        <label><b>Full Name</b></label>
+                        <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Full Name"
+                            autocomplete="off" name="nm" required>
+                        <label><b>Age</b></label>
+                        <input class="w3-input w3-border w3-margin-bottom" type="number" placeholder="Enter Age"
+                            autocomplete="off" name="age" required>
+                        <label><b>Password</b></label>
+                        <input class="w3-input w3-border" type="password" placeholder="Enter Password" name="psd"
+                            required autocomplete="off">
+                        <button class="w3-button w3-block w3-green w3-section w3-padding" style="border-radius: 3px;"
+                            type="submit">SignUp</button>
+                    </div>
+                </form>
+
+                <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+                    <button onclick="document.getElementById('id01').style.display='none'" type="button"
+                        class="w3-button w3-red">Cancel</button>
+                </div>
+
+            </div>
+        </div>
+        <div id="id01" class="w3-modal">
+            <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+
+                <div class="w3-center"><br>
+                    <span onclick="document.getElementById('id01').style.display='none'"
+                        class="w3-button w3-xlarge w3-transparent w3-display-topright" title="Close Modal">×</span>
+                </div>
+
+                <form class="w3-container" action="/login" method="POST">
+                    <div class="w3-section">
+                        <label><b>UserID</b></label>
+                        <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter UserID"
+                            autocomplete="off" name="id" required>
+                        <label><b>Password</b></label>
+                        <input class="w3-input w3-border" type="password" placeholder="Enter Password" name="psd"
+                            required autocomplete="off">
+                        <button class="w3-button w3-block w3-green w3-section w3-padding" style="border-radius: 3px;"
+                            type="submit">Login</button>
+                    </div>
+                </form>
+
+                <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+                    <button onclick="document.getElementById('id01').style.display='none'" type="button"
+                        class="w3-button w3-red">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="w3m-container" style="background-image: url('https://image.freepik.com/free-photo/hands-top-each-other-friends_23-2148222594.jpg');
+         background-repeat:no-repeat;">
+        <h2 id="intro">Come together and share your thoughts.</h2>
+    </div>
+</body>
+<script src="sweetalert2/dist/sweetalert2.all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+</html>

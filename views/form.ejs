@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<title>Submit Post</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<body>
+
+    <header class="w3-container w3-teal">
+        <h1>Post Submission</h1>
+    </header>
+
+    <div class="w3-container w3-half w3-margin-top">
+
+        <form class="w3-container w3-card-4" action="/submit" method="POST">
+            <p>
+                <label>Author</label>
+                <input class="w3-input" type="text" style="width:90%" name="id" autocomplete="off" required>
+            </p>
+            <p>
+                <label>Title</label>
+                <input class="w3-input" type="text" style="width:90%" name="ttl" autocomplete="off" required>
+            </p>
+            <p>
+                <label>Description</label><br>
+                <!-- <input class="w3-input" type="text" style="width:90%;" name="dsc" required> -->
+                <textarea name="dsc" cols="40" rows="5" style="width:90%" autocomplete="off"></textarea>
+            </p>
+            <p>
+                <button class="w3-button w3-section w3-teal w3-ripple" type="submit"> Submit </button>
+            </p>
+        </form>
+
+    </div>
+
+</body>
+
+</html>

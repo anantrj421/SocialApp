@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<title>Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Comfortaa:700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
+<style>
+    .w3m-container {
+        width: 600px;
+        height: 400px;
+        margin: 100px auto 0px auto;
+        border-radius: 8px;
+        box-shadow: 5px 5px 20px #64a8aa;
+    }
+
+    body {
+        background-image: url("http://getwallpapers.com/wallpaper/full/3/2/4/1064081-starry-night-desktop-background-2560x1440-large-resolution.jpg");
+    }
+
+    #btn {
+        margin-right: 50px;
+    }
+
+    #logo {
+        width: 50px;
+        margin-left: 40px;
+    }
+
+    .navbar-brand {
+        margin-right: 65% !important;
+        font-family: 'Comfortaa', cursive !important;
+    }
+
+    #intro {
+        margin: 0px 50px 100px 20px;
+        padding-top: 100px;
+        width: 60%;
+        font-size: 3.5rem;
+        color: #2a2430;
+        font-family: 'Satisfy', cursive !important;
+
+    }
+
+    .post {
+        margin: 40px 30px 80px 30px;
+        padding: 20px 10px 10px 10px;
+        color: white;
+        border-radius: 4px;
+        border: solid grey 2px;
+    }
+
+    .ttl {
+        background: #c70d3a;
+        color: white;
+        margin: 50px 30px 30px 30px;
+        padding: 10px 10px 10px 10px;
+        width: auto;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    .post h4 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+</style>
+
+<body>
+    <nav class="navbar" style="background-color:white;">
+        <img src="https://image.flaticon.com/icons/svg/74/74472.svg" alt="logo" id="logo">
+        <h5 class="navbar-brand" href="#"
+            style="font-weight: bold; font-family:Verdana, Geneva, Tahoma, sans-serif; color: #23374d; font-size: 2.5rem">
+            <%=title%></h5>
+        <button onclick="document.getElementById('id01').style.display='block'" style="border-radius: 6px;"
+            class="w3-button w3-green w3-large" id="btn">
+            <i class="fas fa-user-cog"></i></button>
+        <div id="id01" class="w3-modal">
+            <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+
+                <div class="w3-center"><br>
+                    <span onclick="document.getElementById('id01').style.display='none'"
+                        class="w3-button w3-xlarge w3-transparent w3-display-topright" title="Close Modal">×</span>
+                </div>
+                <form class="w3-container" action="/submit" method="GET">
+                    <div class="w3-section">
+                        <button class="w3-button w3-block w3-green w3-section w3-padding"
+                            style="border-radius: 3px; font-size: 1.5rem;" type="submit"><i
+                                class="fas fa-clipboard"></i> Add Post</button>
+                    </div>
+                </form>
+                <form class="w3-container" action="/logout" method="GET">
+                    <div class="w3-section">
+                        <button class="w3-button w3-block w3-green w3-section w3-padding"
+                            style="border-radius: 3px; font-size: 1.5rem;" type="submit"><i
+                                class="fas fa-sign-out-alt"></i> Log-Out</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <%list.forEach(function(it){%>
+    <h3 class="ttl">Title : <%=it.title%></h3>
+    <div class="post">
+        <h5><%=it.desc%></h5>
+        <h4>By <%=it.user_id%></h4>
+    </div>
+    <%});%>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+</html>
