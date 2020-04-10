@@ -8,13 +8,7 @@ const cookieSession = require('cookie-session');
 
 require('firebase/database');
 var firebaseConfig = {
-	apiKey: "AIzaSyDEbORlMjMpUWOajY8QHEqkwuTy5dNjcsI",
-	authDomain: "fir-d3c89.firebaseapp.com",
-	databaseURL: "https://fir-d3c89.firebaseio.com",
-	projectId: "fir-d3c89",
-	storageBucket: "fir-d3c89.appspot.com",
-	messagingSenderId: "396880130439",
-	appId: "1:396880130439:web:3b53f8bc39b866f6"
+	// Enter your firebase credentials
 };
 firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
